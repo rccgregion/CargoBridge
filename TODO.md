@@ -5,14 +5,16 @@
 ### Project Setup & Infrastructure
 - [x] Create project directory structure
 - [x] Set up version control (Git) and remote repository
-- [ ] Choose technology stack (React Native/Flutter for mobile, Node.js/Python for backend)
-- [ ] Set up development environment and CI/CD pipeline
-- [ ] Configure cloud hosting (AWS/Google Cloud/Azure)
+- [x] Choose technology stack (React Native/Flutter for mobile, Node.js/Python for backend)
+- [x] Set up development environment and CI/CD pipeline
+- [x] Configure cloud hosting (AWS/Google Cloud/Azure)
+- [x] Install backend dependencies and test server startup
+- [x] Set up MongoDB database connection
 
 ### Backend Development
-- [ ] Design database schema (users, companies, shipments, reviews)
-- [ ] Implement user authentication and authorization
-- [ ] Create API endpoints for user management
+- [x] Design database schema (users, companies, shipments, reviews)
+- [x] Implement user authentication and authorization
+- [x] Create API endpoints for user management
 - [ ] Set up basic admin panel for content management
 
 ### Mobile App Development

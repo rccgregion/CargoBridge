@@ -1,26 +1,26 @@
 const express = require('express');
 const router = express.Router();
+const {
+  register,
+  login,
+  getMe,
+  updateProfile,
+  updatePassword,
+  logout,
+  forgotPassword,
+  resetPassword,
+  verifyEmail
+} = require('../controllers/userController');
+const { protect } = require('../middleware/auth');
 
-// Placeholder controller functions
-const userController = {
-  register: (req, res) => {
-    res.status(201).json({ message: 'User registration endpoint' });
-  },
-  login: (req, res) => {
-    res.status(200).json({ message: 'User login endpoint' });
-  },
-  profile: (req, res) => {
-    res.status(200).json({ message: 'User profile endpoint' });
-  }
-};
-
-// User registration
-router.post('/register', userController.register);
-
-// User login
-router.post('/login', userController.login);
-
-// Get user profile
-router.get('/profile', userController.profile);
+router.post('/register', register);
+router.post('/login', login);
+router.get('/me', protect, getMe);
+router.put('/profile', protect, updateProfile);
+router.put('/password', protect, updatePassword);
+router.get('/logout', protect, logout);
+router.post('/forgotpassword', forgotPassword);
+router.put('/resetpassword/:resettoken', resetPassword);
+router.put('/verifyemail/:verificationtoken', verifyEmail);
 
 module.exports = router;
